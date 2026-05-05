@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/hooks/useLanguage';
 import { getTranslations } from '@/lib/i18n';
-import { Twitter, Github, Linkedin } from 'lucide-react';
+import { Mail, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -32,15 +32,12 @@ export default function Footer() {
               }
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
-                <Twitter className="w-5 h-5 text-zinc-400" />
+              <a href="mailto:hello@solidstack.dev" className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
+                <Mail className="w-5 h-5 text-zinc-400" />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
-                <Github className="w-5 h-5 text-zinc-400" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
-                <Linkedin className="w-5 h-5 text-zinc-400" />
-              </a>
+              <button onClick={() => scrollToSection('contact')} className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
+                <MessageSquare className="w-5 h-5 text-zinc-400" />
+              </button>
             </div>
           </div>
 
