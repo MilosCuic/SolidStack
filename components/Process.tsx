@@ -1,35 +1,37 @@
 'use client';
 
-import { getTranslations } from '@/lib/i18n';
 import { useLanguage } from '@/lib/hooks/useLanguage';
+import { getTranslations } from '@/lib/i18n';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function Process() {
   const { language } = useLanguage();
   const t = getTranslations(language).process;
 
   return (
-    <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 bg-zinc-950/30">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-20 lg:py-32 px-6 lg:px-12 bg-[#0d0e1a]">
+      <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{t.title}</h2>
         </div>
 
-        {/* Steps Grid */}
+        {/* Process Steps */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {t.steps.map((step, index) => (
-            <div key={index} className="group">
-              <div className="flex items-start gap-4">
-                {/* Number */}
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-600/10 border border-indigo-600/20 flex items-center justify-center">
-                  <span className="text-indigo-400 font-bold text-sm">{index + 1}</span>
-                </div>
+            <div key={index} className="group relative">
+              {/* Step number indicator */}
+              <div className="absolute -top-2 -left-2 w-8 h-8 rounded-full bg-gradient-to-br from-[#5b58eb] to-[#7c3aed] flex items-center justify-center text-white text-sm font-bold shadow-lg">
+                {index + 1}
+              </div>
 
-                {/* Content */}
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">{step.description}</p>
+              {/* Card */}
+              <div className="h-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.07] hover:border-[#5b58eb]/30 transition-all">
+                <div className="flex items-start gap-4 mb-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#5b58eb] flex-shrink-0 mt-1" />
+                  <h3 className="text-lg font-bold text-white">{step.title}</h3>
                 </div>
+                <p className="text-zinc-400 text-sm leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

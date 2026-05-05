@@ -1,23 +1,23 @@
+import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import TrustStrip from '@/components/TrustStrip';
 import ProblemSolution from '@/components/ProblemSolution';
 import Services from '@/components/Services';
 import Process from '@/components/Process';
-import WhyUs from '@/components/WhyUs';
+import Values from '@/components/Values';
 import Contact from '@/components/Contact';
-import LanguageToggle from '@/components/LanguageToggle';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <LanguageToggle />
+      <Navigation />
       <Hero />
-      <TrustStrip />
       <ProblemSolution />
       <Services />
       <Process />
-      <WhyUs />
+      <Values />
       <Contact />
+      <Footer />
     </main>
   );
 }

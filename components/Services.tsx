@@ -1,22 +1,22 @@
 'use client';
 
-import { getTranslations } from '@/lib/i18n';
 import { useLanguage } from '@/lib/hooks/useLanguage';
-import { Rocket, Package, Gauge, Network, Shield, Users } from 'lucide-react';
+import { getTranslations } from '@/lib/i18n';
+import { Rocket, Package, Network, Gauge, Shield, Users } from 'lucide-react';
 
 export default function Services() {
   const { language } = useLanguage();
   const t = getTranslations(language).services;
 
-  const icons = [Rocket, Package, Gauge, Network, Shield, Users];
+  const icons = [Rocket, Package, Network, Gauge, Shield, Users];
 
   return (
-    <section id="services" className="py-24 lg:py-32 px-6 sm:px-8 lg:px-12 bg-white/[0.01]">
+    <section id="services" className="py-20 lg:py-32 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
-        <div className="text-center mb-16 lg:mb-20">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">{t.title}</h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 mx-auto rounded-full" />
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="text-xs font-bold text-[#8b88ff] uppercase tracking-wider mb-4 block">{t.title}</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{t.heading}</h2>
         </div>
 
         {/* Services Grid */}
@@ -28,20 +28,18 @@ export default function Services() {
                 key={index}
                 className="group relative"
               >
-                {/* Glow effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500" />
-                
-                <div className="relative h-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300">
+                {/* Card */}
+                <div className="relative h-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.07] hover:border-[#5b58eb]/50 transition-all duration-300">
                   {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-violet-500/10 border border-indigo-500/20 mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <Icon className="w-8 h-8 text-indigo-400" />
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#5b58eb]/10 border border-[#5b58eb]/20 mb-6 group-hover:scale-110 group-hover:bg-[#5b58eb]/20 transition-all">
+                    <Icon className="w-7 h-7 text-[#8b88ff]" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
 
                   {/* Description */}
-                  <p className="text-zinc-400 leading-relaxed text-sm lg:text-base">{service.description}</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">{service.description}</p>
                 </div>
               </div>
             );

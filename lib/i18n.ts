@@ -2,163 +2,301 @@ export type Language = 'sr' | 'en';
 
 export const translations = {
   sr: {
+    nav: {
+      services: 'Usluge',
+      projects: 'Projekti',
+      careers: 'Karijere',
+      about: 'O nama',
+      contact: 'Kontakt',
+      getStarted: 'Zakaži razgovor'
+    },
     hero: {
-      headline: "Pretvaramo tvoju ideju u funkcionalan digitalni proizvod.",
-      subheadline: "MVP, full product development i unapređenje postojećih sistema.",
-      ctaPrimary: "Zakaži razgovor",
-      ctaSecondary: "Pogledaj usluge"
+      badge: '🚀 PRATITE NAS / MVP, FULL PRODUCT DEVELOPMENT',
+      title: 'Pretvaramo tvoju ideju u funkcionalan digitalni proizvod.',
+      subtitle: 'MVP, full product development i unapređenje postojećih sistema.',
+      ctaPrimary: 'Zakaži razgovor',
+      ctaSecondary: 'Pogledaj usluge',
+      teamBadge: '6 developers + 2 project managera',
+      endToEndBadge: 'End-to-end development',
+      readyTeamBadge: 'EU/US ready tim'
     },
-    trust: {
-      developers: "6 developera + 2 project managera",
-      endToEnd: "End-to-end development",
-      ready: "EU/US ready tim"
+    popular: {
+      title: 'POPULARNE',
+      heading: 'Ideja postoji, ali put do proizvoda je nejasan.',
+      items: [
+        'Nedostaju tehnički ljudi u timu ili nemaš dovoljno resursa',
+        'Trebaš brzu realizaciju i testiranje tržišta',
+        'Bojis se da nećeš naći pravi tim za proizvod',
+        'Ciljaš korporativnu saradnju i trebaš profesionalnu prezentaciju'
+      ]
     },
-    problem: {
-      title: "Izazov",
-      description: "Imaš sjajnu ideju, ali ne znaš odakle da počneš? Tehnički aspekti te brinu i trebaš tim koji razume i biznis i razvoj?"
-    },
-    solution: {
-      title: "Rešenje",
-      description: "Mi preuzimamo kompletan proces - od ideje do lansiranja. Gradiš proizvod sa timom koji kombinuje tehničku ekspertizu i razumevanje biznisa."
+    build: {
+      title: 'MI ĆE BITI TU',
+      heading: 'Mi gradimo digitalne proizvode od ideje do skaliranja.',
+      items: [
+        'Jasno određen proces koji započinje sa razumevanjem problema',
+        'End-to-end razvoj sistema koji je pripremljen za rast',
+        'Zajednički rad sa iskusnim timom koji razmišlja o proizvodu',
+        'Fokus na arhitekturu koja štedi vreme i novac u budućnosti'
+      ]
     },
     services: {
-      title: "Naše usluge",
+      title: 'PROJEKTI',
+      heading: 'Kako možemo da pomognemo',
       items: [
         {
-          title: "MVP Development",
-          description: "Brzo lansiranje minimalno funkcionalnog proizvoda za testiranje tržišta."
+          title: 'MVP Development',
+          description: 'Izrađujemo minimalnu funkcionalnu verziju proizvoda u roku od nekoliko nedelja, prilagođenu testiranju ideje na tržištu.'
         },
         {
-          title: "Full Product Development",
-          description: "Kompletna izgradnja skalabilnih, pouzdanih i modernih digitalnih proizvoda."
+          title: 'Full Product Development',
+          description: 'Kompletna izgradnja digitalnih proizvoda sa skalabilnom arhitekturom i planiranim razvojem svih faza proizvoda.'
         },
         {
-          title: "System Optimization",
-          description: "Poboljšanje performansi i efikasnosti postojećih sistema."
+          title: 'Architecture & Scaling',
+          description: 'Osmišljavamo tehničku osnovu sistema koja će omogućiti rast proizvoda bez promena u fundamentima.'
         },
         {
-          title: "Architecture & Scaling",
-          description: "Dizajniranje arhitekture spremne za rast i skaliranje biznisa."
+          title: 'System Optimization',
+          description: 'Analiziramo performanse postojećeg sistema i smanjujemo troškove održavanja kroz optimizaciju koda i arhitekture.'
         },
         {
-          title: "Security Analysis",
-          description: "Dubinska analiza i zaštita sistema od sigurnosnih pretnji."
+          title: 'Security Analysis',
+          description: 'Sprovodimo dubinsku analizu sigurnosnih aspekata sistema i štitimo podatke korisnika od spoljnih pretnji.'
         },
         {
-          title: "Team Augmentation",
-          description: "Proširenje tvojeg tima sa našim stručnjacima kada ti je potrebno."
+          title: 'Team Augmentation',
+          description: 'Proširujemo postojeći tim sa našim inženjerima koji donose iskustvo i ekspertizu potrebnu za uspeh projekta.'
         }
       ]
     },
     process: {
-      title: "Kako radimo",
+      title: 'Jasan proces. Predvidivi rezultati.',
       steps: [
-        { title: "Razumevanje ideje", description: "Analiziramo tvoju viziju i ciljeve" },
-        { title: "Planiranje", description: "Kreiramo roadmap i definišemo milestone-e" },
-        { title: "Arhitektura", description: "Dizajniramo skalabilnu tehničku osnovu" },
-        { title: "Development", description: "Gradimo proizvod sa fokusom na kvalitet" },
-        { title: "Testiranje", description: "Osiguravamo stabilnost i pouzdanost" },
-        { title: "Launch & podrška", description: "Lansiramo i pružamo kontinuiranu podršku" }
+        {
+          title: 'Razumevanje ideje',
+          description: 'Dubinski proces analize problema i ciljeva proizvoda, identifikacija ključnih funkcionalnosti.'
+        },
+        {
+          title: 'Planiranje',
+          description: 'Definicija roadmap-a proizvoda, određivanje prioriteta i raspodela resursa kroz iterativni razvoj.'
+        },
+        {
+          title: 'Arhitektura',
+          description: 'Kreiranje tehničke osnove koja omogućava brz razvoj i jednostavno skaliranje proizvoda.'
+        },
+        {
+          title: 'Razvoj',
+          description: 'Izgradnja funkcionalnosti sa fokusom na kvalitet koda i kontinuiranu integraciju promena.'
+        },
+        {
+          title: 'Testiranje',
+          description: 'Sistematska provera stabilnosti sistema i osiguravanje pouzdanosti svih funkcionalnosti.'
+        },
+        {
+          title: 'Lansiranje i podrška',
+          description: 'Implementacija u produkciju i kontinuirana podrška tokom rasta proizvoda.'
+        }
       ]
     },
-    whyUs: {
-      title: "Zašto mi?",
+    values: {
+      title: 'Više od koda. Partner u vašem uspehu.',
       items: [
-        { title: "Biznis + engineering mindset", description: "Razumemo i tehničke i poslovne izazove" },
-        { title: "Brza realizacija", description: "Efikasni procesi i fokus na isporuku" },
-        { title: "Čist, skalabilan kod", description: "Kvalitet koji omogućava rast proizvoda" },
-        { title: "Transparentna komunikacija", description: "Redovni update-i i jasna saradnja" },
-        { title: "Potpuna odgovornost", description: "Preuzimamo vlasništvo nad isporukom" }
+        {
+          title: 'Poslovna + tehnička mentalnost',
+          description: 'Razumemo i tehnički i poslovni kontekst svakog projekta i doprinosimo strateškim odlukama.'
+        },
+        {
+          title: 'Brza realizacija',
+          description: 'Efikasni procesi koji omogućavaju brzu isporuku uz održavanje visokih standarda kvaliteta.'
+        },
+        {
+          title: 'Čist, skalabilan kod',
+          description: 'Kvalitet koji omogućava rast proizvoda bez prepreka i tehničkog duga.'
+        },
+        {
+          title: 'Transparentna komunikacija',
+          description: 'Redovni update-i i jasna saradnja kroz agilne metodologije rada.'
+        },
+        {
+          title: 'Potpuna odgovornost',
+          description: 'Preuzimamo vlasništvo nad isporukom i angažujemo se na dugoročnom uspehu proizvoda.'
+        }
       ]
     },
-    contact: {
-      title: "Imaš ideju? Hajde da je pretvorimo u proizvod.",
-      namePlaceholder: "Tvoje ime",
-      emailPlaceholder: "Email adresa",
-      messagePlaceholder: "Ukaži nam o svojoj ideji...",
-      ctaButton: "Pošalji upit",
-      successMessage: "Hvala! Javićemo ti se uskoro.",
-      errorMessage: "Došlo je do greške. Pokušaj ponovo."
+    idea: {
+      title: 'TI IMAŠ IDEJU?',
+      heading: 'Imaš ideju? Hajde da je pretvorimo u proizvod.',
+      description: 'Pošalji nam svoje kontakt podatke i kratak opis onoga što trebaš, a mi ćemo te kontaktirati u roku od 12 sati.'
+    },
+    form: {
+      name: 'Ime i prezime',
+      email: 'Email',
+      company: 'Kompanija',
+      message: 'Poruka',
+      submit: 'Pošalji upit',
+      successMessage: 'Hvala! Javićemo ti se uskoro.',
+      errorMessage: 'Došlo je do greške. Pokušaj ponovo.'
+    },
+    footer: {
+      navigate: 'Navigacija',
+      links: 'Linkovi',
+      projects: 'Naš rad',
+      team: 'Nas tim',
+      services: 'Usluge',
+      careers: 'Karijere',
+      blog: 'Blog',
+      contact: 'Kontakt',
+      rights: '© 2025 SolidStack. Sva prava zadržana.'
     }
   },
   en: {
+    nav: {
+      services: 'Services',
+      projects: 'Projects',
+      careers: 'Careers',
+      about: 'About',
+      contact: 'Contact',
+      getStarted: 'Get Started'
+    },
     hero: {
-      headline: "We turn your idea into a functional digital product.",
-      subheadline: "MVP, full product development, and improvement of existing systems.",
-      ctaPrimary: "Schedule a call",
-      ctaSecondary: "View services"
+      badge: '🚀 FOLLOW US / MVP, FULL PRODUCT DEVELOPMENT',
+      title: 'We turn your idea into a functional digital product.',
+      subtitle: 'MVP, full product development, and improvement of existing systems.',
+      ctaPrimary: 'Schedule a call',
+      ctaSecondary: 'View services',
+      teamBadge: '6 developers + 2 project managers',
+      endToEndBadge: 'End-to-end development',
+      readyTeamBadge: 'EU/US ready team'
     },
-    trust: {
-      developers: "6 developers + 2 project managers",
-      endToEnd: "End-to-end development",
-      ready: "EU/US ready team"
+    popular: {
+      title: 'POPULAR',
+      heading: 'Idea exists, but the path to product is unclear.',
+      items: [
+        'Missing technical people in the team or not enough resources',
+        'Need fast realization and market testing',
+        'Worried about not finding the right team for the product',
+        'Targeting corporate collaboration and need professional presentation'
+      ]
     },
-    problem: {
-      title: "The Challenge",
-      description: "You have a great idea, but don't know where to start? Technical aspects worry you and you need a team that understands both business and development?"
-    },
-    solution: {
-      title: "The Solution",
-      description: "We take care of the entire process - from idea to launch. Build your product with a team that combines technical expertise and business understanding."
+    build: {
+      title: 'WE BUILD IT HERE',
+      heading: 'We build digital products from idea to scaling.',
+      items: [
+        'Clearly defined process that starts with understanding the problem',
+        'End-to-end system development prepared for growth',
+        'Collaborative work with experienced team that thinks about the product',
+        'Focus on architecture that saves time and money in the future'
+      ]
     },
     services: {
-      title: "Our Services",
+      title: 'PROJECTS',
+      heading: 'How we can help',
       items: [
         {
-          title: "MVP Development",
-          description: "Rapid launch of a minimum viable product for market testing."
+          title: 'MVP Development',
+          description: 'We build a minimum viable product version in a few weeks, tailored for market testing.'
         },
         {
-          title: "Full Product Development",
-          description: "Complete development of scalable, reliable, and modern digital products."
+          title: 'Full Product Development',
+          description: 'Complete digital product development with scalable architecture and planned development of all product phases.'
         },
         {
-          title: "System Optimization",
-          description: "Performance improvement and efficiency of existing systems."
+          title: 'Architecture & Scaling',
+          description: 'We design the technical foundation of the system that will enable product growth without fundamental changes.'
         },
         {
-          title: "Architecture & Scaling",
-          description: "Designing architecture ready for business growth and scaling."
+          title: 'System Optimization',
+          description: 'We analyze existing system performance and reduce maintenance costs through code and architecture optimization.'
         },
         {
-          title: "Security Analysis",
-          description: "In-depth analysis and protection of systems from security threats."
+          title: 'Security Analysis',
+          description: 'We conduct in-depth security analysis of system aspects and protect user data from external threats.'
         },
         {
-          title: "Team Augmentation",
-          description: "Expanding your team with our experts when you need it."
+          title: 'Team Augmentation',
+          description: 'We expand the existing team with our engineers who bring experience and expertise needed for project success.'
         }
       ]
     },
     process: {
-      title: "How We Work",
+      title: 'Clear process. Predictable results.',
       steps: [
-        { title: "Understanding the idea", description: "We analyze your vision and goals" },
-        { title: "Planning", description: "We create a roadmap and define milestones" },
-        { title: "Architecture", description: "We design a scalable technical foundation" },
-        { title: "Development", description: "We build the product with focus on quality" },
-        { title: "Testing", description: "We ensure stability and reliability" },
-        { title: "Launch & support", description: "We launch and provide ongoing support" }
+        {
+          title: 'Understanding the idea',
+          description: 'In-depth problem and product goal analysis, identification of key functionalities.'
+        },
+        {
+          title: 'Planning',
+          description: 'Product roadmap definition, priority setting and resource allocation through iterative development.'
+        },
+        {
+          title: 'Architecture',
+          description: 'Creating technical foundation that enables rapid development and easy product scaling.'
+        },
+        {
+          title: 'Development',
+          description: 'Building functionality with focus on code quality and continuous change integration.'
+        },
+        {
+          title: 'Testing',
+          description: 'Systematic system stability checking and ensuring reliability of all functionalities.'
+        },
+        {
+          title: 'Launch & support',
+          description: 'Production implementation and ongoing support during product growth.'
+        }
       ]
     },
-    whyUs: {
-      title: "Why Us?",
+    values: {
+      title: 'More than code. Partner in your success.',
       items: [
-        { title: "Business + engineering mindset", description: "We understand both technical and business challenges" },
-        { title: "Fast execution", description: "Efficient processes and focus on delivery" },
-        { title: "Clean, scalable code", description: "Quality that enables product growth" },
-        { title: "Transparent communication", description: "Regular updates and clear collaboration" },
-        { title: "Full ownership", description: "We take ownership of delivery" }
+        {
+          title: 'Business + technical mindset',
+          description: 'We understand both technical and business context of each project and contribute to strategic decisions.'
+        },
+        {
+          title: 'Fast execution',
+          description: 'Efficient processes that enable rapid delivery while maintaining high quality standards.'
+        },
+        {
+          title: 'Clean, scalable code',
+          description: 'Quality that enables product growth without obstacles and technical debt.'
+        },
+        {
+          title: 'Transparent communication',
+          description: 'Regular updates and clear collaboration through agile work methodologies.'
+        },
+        {
+          title: 'Full ownership',
+          description: 'We take ownership of delivery and commit to long-term product success.'
+        }
       ]
     },
-    contact: {
-      title: "Have an idea? Let's turn it into a product.",
-      namePlaceholder: "Your name",
-      emailPlaceholder: "Email address",
-      messagePlaceholder: "Tell us about your idea...",
-      ctaButton: "Send inquiry",
-      successMessage: "Thank you! We'll get back to you soon.",
-      errorMessage: "An error occurred. Please try again."
+    idea: {
+      title: 'HAVE AN IDEA?',
+      heading: 'Have an idea? Let\'s turn it into a product.',
+      description: 'Send us your contact details and a brief description of what you need, and we\'ll contact you within 12 hours.'
+    },
+    form: {
+      name: 'Full name',
+      email: 'Email',
+      company: 'Company',
+      message: 'Message',
+      submit: 'Send inquiry',
+      successMessage: 'Thank you! We\'ll get back to you soon.',
+      errorMessage: 'An error occurred. Please try again.'
+    },
+    footer: {
+      navigate: 'Navigate',
+      links: 'Links',
+      projects: 'Our work',
+      team: 'Our team',
+      services: 'Services',
+      careers: 'Careers',
+      blog: 'Blog',
+      contact: 'Contact',
+      rights: '© 2025 SolidStack. All rights reserved.'
     }
   }
 };
@@ -168,12 +306,10 @@ export function detectLanguage(): Language {
   
   const browserLang = navigator.language.toLowerCase();
   
-  // Check if browser language is Serbian
   if (browserLang.startsWith('sr')) {
     return 'sr';
   }
   
-  // Default to English for all other languages
   return 'en';
 }
 

@@ -1,38 +1,54 @@
 'use client';
 
-import { getTranslations } from '@/lib/i18n';
 import { useLanguage } from '@/lib/hooks/useLanguage';
-import { AlertCircle, CheckCircle } from 'lucide-react';
+import { getTranslations } from '@/lib/i18n';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function ProblemSolution() {
   const { language } = useLanguage();
   const t = getTranslations(language);
 
   return (
-    <section className="py-24 lg:py-32 px-6 sm:px-8 lg:px-12">
+    <section className="py-20 lg:py-32 px-6 lg:px-12 bg-[#0d0e1a]">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-          {/* Problem */}
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
-            <div className="relative h-full bg-gradient-to-br from-red-500/5 to-transparent backdrop-blur-sm border border-red-500/10 rounded-3xl p-8 lg:p-10 hover:border-red-500/20 transition-all">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 mb-6">
-                <AlertCircle className="w-7 h-7 text-red-400" />
-              </div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">{t.problem.title}</h3>
-              <p className="text-zinc-400 leading-relaxed text-base lg:text-lg">{t.problem.description}</p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Problem - POPULARNE */}
+          <div>
+            <div className="mb-6">
+              <span className="text-xs font-bold text-[#8b88ff] uppercase tracking-wider">{t.popular.title}</span>
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight">
+              {t.popular.heading}
+            </h2>
+            <div className="space-y-4">
+              {t.popular.items.map((item, index) => (
+                <div key={index} className="flex items-start gap-3 group">
+                  <div className="mt-1">
+                    <ArrowRight className="w-5 h-5 text-red-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                  <p className="text-zinc-400 leading-relaxed">{item}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Solution */}
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
-            <div className="relative h-full bg-gradient-to-br from-indigo-500/5 to-transparent backdrop-blur-sm border border-indigo-500/10 rounded-3xl p-8 lg:p-10 hover:border-indigo-500/20 transition-all">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 mb-6">
-                <CheckCircle className="w-7 h-7 text-indigo-400" />
-              </div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">{t.solution.title}</h3>
-              <p className="text-zinc-400 leading-relaxed text-base lg:text-lg">{t.solution.description}</p>
+          {/* Solution - MI ĆE BITI TU */}
+          <div>
+            <div className="mb-6">
+              <span className="text-xs font-bold text-[#8b88ff] uppercase tracking-wider">{t.build.title}</span>
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight">
+              {t.build.heading}
+            </h2>
+            <div className="space-y-4">
+              {t.build.items.map((item, index) => (
+                <div key={index} className="flex items-start gap-3 group">
+                  <div className="mt-1">
+                    <CheckCircle className="w-5 h-5 text-[#5b58eb] group-hover:scale-110 transition-transform" />
+                  </div>
+                  <p className="text-zinc-400 leading-relaxed">{item}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
